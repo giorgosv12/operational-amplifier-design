@@ -1,0 +1,40 @@
+* source TELESTIKOS
+M_M3         N03169 N03169 N03149 N03149 pfet  
++ L=1u  
++ W=1.5u         
+M_M4         N03196 N03169 N03149 N03149 pfet  
++ L=1u  
++ W=1.5u         
+M_M6         N03261 N03196 N03149 N03149 pfet  
++ L=1u  
++ W=10u         
+M_M7         N03261 N03214 N03273 N03273 nfet  
++ L=1u  
++ W=3.5u         
+M_M8         N03214 N03214 N03273 N03273 nfet  
++ L=1u  
++ W=1u         
+M_M1         N03169 0 N03200 N03200 nfet  
++ L=1u  
++ W=4u         
+V_V1         N03149 0 2.013Vdc
+V_V2         0 N03273 2.013Vdc
+C_Cc         N03196 N03261  0.6p  TC=0,0 
+M_M5         N03200 N03214 N03273 N03273 nfet  
++ L=1u  
++ W=2u         
+C_CL         0 N03261  2.71p  TC=0,0 
+M_M2         N03196 N15788 N03200 N03200 nfet  
++ L=1u  
++ W=4u         
+V_V4         N27100 0  
++PULSE 0 1 1u 0 0 2u 4u
+V_V6         N241450 0 4Vdc
+R_R1         N24240 N241450  259k TC=0,0 
+R_R2         0 N242280  215k TC=0,0 
+X_Q2         N24240 N24240 0 awb2n2222 PARAMS:                                 
++            
+X_Q3         N03214 N24240 N242280 awb2n2222 PARAMS:                           
++                  
+R_R3         0 N27100  1k TC=0,0 
+V_V7         N15788 0 DC 0Vdc AC 0.1Vac 

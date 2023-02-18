@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-telest"  [ C:\Users\HLIAS\Desktop\workinprogres\ParadoteTelestMHTELIKO\SpiceTelestikos\telestikos-pspicefiles\schematic1\telest.sim ] 
+
+** Creating circuit file "telest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../telestikos-pspicefiles/telestikos.lib" 
+* From [PSPICE NETLIST] section of C:\Users\HLIAS\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 100k 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

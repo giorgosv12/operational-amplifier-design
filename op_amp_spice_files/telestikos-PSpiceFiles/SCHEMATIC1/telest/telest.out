@@ -1,0 +1,246 @@
+
+**** 01/01/21 15:37:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-telest"  [ C:\Users\HLIAS\Desktop\workinprogres\ParadoteTelestMHTELIKO\SpiceTelestikos\telestikos-pspicefile
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "telest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../telestikos-pspicefiles/telestikos.lib" 
+* From [PSPICE NETLIST] section of C:\Users\HLIAS\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 100k 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TELESTIKOS
+M_M3         N03169 N03169 N03149 N03149 pfet  
++ L=1u  
++ W=1.5u         
+M_M4         N03196 N03169 N03149 N03149 pfet  
++ L=1u  
++ W=1.5u         
+M_M6         N03261 N03196 N03149 N03149 pfet  
++ L=1u  
++ W=10u         
+M_M7         N03261 N03214 N03273 N03273 nfet  
++ L=1u  
++ W=3.5u         
+M_M8         N03214 N03214 N03273 N03273 nfet  
++ L=1u  
++ W=1u         
+M_M1         N03169 0 N03200 N03200 nfet  
++ L=1u  
++ W=4u         
+V_V1         N03149 0 2.013Vdc
+V_V2         0 N03273 2.013Vdc
+C_Cc         N03196 N03261  0.6p  TC=0,0 
+M_M5         N03200 N03214 N03273 N03273 nfet  
++ L=1u  
++ W=2u         
+C_CL         0 N03261  2.71p  TC=0,0 
+M_M2         N03196 N15788 N03200 N03200 nfet  
++ L=1u  
++ W=4u         
+V_V4         N27100 0  
++PULSE 0 1 1u 0 0 2u 4u
+V_V6         N241450 0 4Vdc
+R_R1         N24240 N241450  259k TC=0,0 
+R_R2         0 N242280  215k TC=0,0 
+X_Q2         N24240 N24240 0 awb2n2222 PARAMS:                                 
++            
+X_Q3         N03214 N24240 N242280 awb2n2222 PARAMS:                           
++                  
+R_R3         0 N27100  1k TC=0,0 
+V_V7         N15788 0 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING telest.cir ****
+.END
+
+**** 01/01/21 15:37:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-telest"  [ C:\Users\HLIAS\Desktop\workinprogres\ParadoteTelestMHTELIKO\SpiceTelestikos\telestikos-pspicefile
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Q2.model4     X_Q3.model4     
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  166.780000E-15  166.780000E-15 
+          BF  150             150            
+          NF    1.074           1.074        
+         VAF   78              78            
+         IKF     .5              .5          
+         ISE    3.920000E-12    3.920000E-12 
+          NE    1.776           1.776        
+          BR    2.394           2.394        
+          NR    1.074           1.074        
+         VAR  500             500            
+          NC    1               1            
+         ISS    0               0            
+          RB   29.324          29.324        
+         RBM     .676            .676        
+          RE     .1              .1          
+          RC    2.346           2.346        
+         CJE    6.750000E-12    6.750000E-12 
+         VJE    1.333           1.333        
+         MJE     .522            .522        
+         CJC    9.630000E-12    9.630000E-12 
+         VJC    1.333           1.333        
+         MJC     .518            .518        
+        XCJC     .5              .5          
+         CJS    0               0            
+         VJS     .7              .7          
+         MJS     .5              .5          
+          TF  181.600000E-12  181.600000E-12 
+         XTF   13.24           13.24         
+         VTF    4.83            4.83         
+         ITF     .2163           .2163       
+          TR   32.500000E-09   32.500000E-09 
+         XTB    2.34            2.34         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 01/01/21 15:37:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-telest"  [ C:\Users\HLIAS\Desktop\workinprogres\ParadoteTelestMHTELIKO\SpiceTelestikos\telestikos-pspicefile
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pfet            nfet            
+               PMOS            NMOS            
+       LEVEL    3               3            
+         TPG   -1                            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD   22.000000E-09  164.700000E-09 
+         VTO    -.9056           .786        
+          KP   29.352000E-06   96.379000E-06 
+       GAMMA     .4863           .5863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH  104.7            85.45         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .85             .8          
+        PBSW     .85             .8          
+          CJ  484.470000E-06  385.410000E-06 
+        CJSW  164.570000E-12  139.400000E-12 
+          MJ     .5027          1.1854       
+        MJSW     .217168         .125195     
+        CGSO   53.752000E-12  402.410000E-12 
+        CGDO   53.752000E-12  402.410000E-12 
+        CGBO  336.500000E-12  361.440000E-12 
+        NSUB   18.900000E+15   16.160000E+15 
+         NFS    3.460000E+12    5.000000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  180.2           591.7          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  373.200000E+03  208.200000E+03 
+       DELTA    1.52             .6967       
+       THETA     .1248           .08122      
+         ETA     .1641           .07066      
+       KAPPA    9.694            .1396       
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V4.
+
+**** 01/01/21 15:37:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-telest"  [ C:\Users\HLIAS\Desktop\workinprogres\ParadoteTelestMHTELIKO\SpiceTelestikos\telestikos-pspicefile
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03149)    2.0130 (N03169)     .1301 (N03196)     .1301 (N03200)    -.8912     
+
+(N03214)    -.7794 (N03261)    1.0289 (N03273)   -2.0130 (N15788)    0.0000     
+
+(N24240)    -.2445 (N27100)    0.0000 (N241450)    4.0000                       
+
+(N242280)    -.7760                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.823E-04
+    V_V2        -2.023E-04
+    V_V4         0.000E+00
+    V_V6        -1.639E-05
+    V_V7         0.000E+00
+
+    TOTAL POWER DISSIPATION   8.40E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/01/21 15:37:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-telest"  [ C:\Users\HLIAS\Desktop\workinprogres\ParadoteTelestMHTELIKO\SpiceTelestikos\telestikos-pspicefile
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+
